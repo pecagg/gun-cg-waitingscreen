@@ -58,15 +58,3 @@ https://gun.eco/docs/API
 This project was made by 
 https://raw.githubusercontent.com/filiphanes/gun-overlays/
 I've just tweaked it for my own use
-
-# Thanks
-This project was inspired by
-- https://github.com/lebaston100/htmlOverlayFramework
-- https://github.com/hberntsen/websocket-png-overlayer
-- https://github.com/Scrxtchy/ts3-overlay-ws
-- https://github.com/slugalisk/win-loss-overlay
-- https://github.com/filiphanes/websocket-overlays
-- https://github.com/ak5/svelte-gun-example
-
-# TODO
-- more overlays
