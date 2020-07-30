@@ -20,14 +20,10 @@ Node server:
     node server.js
 
 ## 2. Open controller
-Open in browser `lower-third-simple/controller.html`.
+Open in browser `roadtorio/kontrola.html`.
 
 ## 3. Open overlay
-Open in browser `lower-third-simple/overlay.html`
-
-# Setup in playout software
-Setting you might need to change is websocket URI in `overlay.html` and `controller.html` in directory `your-overlay/`.
-Set it to the same IP address and port as your server is running on, (i.e. `http://127.0.0.1:8080/gun`).
+Open in browser `roadtorio/pregame.html`
 
 ## OBS Studio
 1. Click the plus button under Sources
