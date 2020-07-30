@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Relog Podcast Controller</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/radio.css">
+<style>
+	.dugme {
+	height: 25px;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 25px;
+    border: 0;	
+    transition: all 1s ease-in;}
+
+    .dugme.focus, .dugme:focus {
+    box-shadow: 0 0 0 0 }
+
+    .dugme.hover, .dugme:hover {
+    color: #fff;
+    background-color: #ff6c00;
+    border-color: #ff6c00;}
+
+    .dugme:active, .dugme:focus, .dugme:target, .dugme:active:focus {
+    	color: #fff;
+    	background-color: #ff6c00;
+    	border: 0;
+    	box-shadow: 0;
+    }
+}
+
+}
+</style>
+</head>
+<body>
+<div class="container-fluid text-white">
+	<div class="row  text-white">
+		<div class="col-md text-white">
+			<div class="card bg-dark text-white">
+				<div class="card-body bg-dark text-white">
+					<h5 class="card-title text-center">Relog Podcast</h5>
+					<div class="form-inline">
+					 <div class="col-sm"><form>	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema1" value="Tema 1"> 
+					 	<button id="dugme1" class="dugme btn-xs mb-2" onclick='ofarbaj1()'>🡄</button>
+					 </div> 
+					 <div class="col-sm">	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema2" value="Tema 2"> 
+					 	<button id="dugme2" class="dugme btn-xs mb-2" onclick='ofarbaj2()'>🡄</button>
+					 </div> 
+					 <div class="col-sm">	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema3" value="Tema 3"> 
+					 	<button id="dugme3" class="dugme btn-xs mb-2" onclick='ofarbaj3()'>🡄</button>
+					 </div> 
+					 <div class="col-sm">	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema4" value="Tema 4"> 
+					 	<button id="dugme4" class="dugme btn-xs mb-2" onclick='ofarbaj4()'>🡄</button>
+					 </div> 
+					 <div class="col-sm">	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema5" value="Tema 5"> 
+					 	<button id="dugme5" class="dugme btn-xs mb-2" onclick='ofarbaj5()'>🡄</button>
+					 </div> 
+					 <div class="col-sm">	<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="tema6" value="Tema 6"> 
+					 	<button id="dugme6" class="dugme btn-xs mb-2" onclick='ofarbaj6()'>🡄</button>
+					 </form> </div> 
+
+					
+
+					 
+					 					 </div></div>
+					 					 <div class="row">
+					<div class="col-sm-4"> <input class="form-control bg-dark text-white ml-4 mb-2 mr-4 mr-sm-2" type="text" id="opsirnije" value="Opširnije o trenutnoj temi"> </div>
+					<div class="col-sm-4"> <input class="form-control bg-dark text-white ml-4 mb-2 mr-4 mr-sm-2" list="aktuelno" id="opsirnije"><datalist id="aktuelno"><option value="Tema 1"><option value="Tema 2"><option value="Tema 3"><option value="Tema 4"><option value="Tema 5"><option value="Tema 6"></datalist> </div>
+					<div class="col-sm-2"> 						<button class="btn btn-xs btn-success ml-4" onclick='show()'>Show</button>
+						<button class="btn btn-xs btn-primary" onclick='hide()'>Hide</button>  </div></div> 
+</div>
+					<div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <script type="text/javascript">
+  </script>
+
+<script src="../js/config.js"></script>
+<script src="../js/gun.min.js"></script>
+<script>
+GUN_SUPER_PEERS = GUN_SUPER_PEERS || ['http://127.0.0.1/gun'];
+let gun = Gun(GUN_SUPER_PEERS);
+var overlay = gun.get('scoreboard').get(window.location.hash || 'demo');
+
+function gunSyncValue(elementID) {
+	var element = document.getElementById(elementID);
+	// Receive updates from gun
+	overlay.get(elementID).on(function(data, key){
+		element.value = data;
+	});
+
+
+
+	// Send changes to gun
+	element.addEventListener('change', function(){
+		overlay.get(elementID).put(element.value)
+	});
+};
+
+
+
+gunSyncValue('tema1');
+gunSyncValue('tema2');
+gunSyncValue('tema3');
+gunSyncValue('tema4');
+gunSyncValue('tema5');
+gunSyncValue('tema6');
+gunSyncValue('opsirnije');
+
+function ofarbaj1() {
+	overlay.get('farba1').put(true)
+	overlay.get('farba2').put(false)
+	overlay.get('farba3').put(false)
+	overlay.get('farba4').put(false)
+	overlay.get('farba5').put(false)
+	overlay.get('farba6').put(false)
+
+ 
+}
+
+
+function ofarbaj2() {
+	overlay.get('farba1').put(false)
+	overlay.get('farba2').put(true)
+	overlay.get('farba3').put(false)
+	overlay.get('farba4').put(false)
+	overlay.get('farba5').put(false)
+	overlay.get('farba6').put(false)
+
+ 
+}
+
+
+function ofarbaj3() {
+	overlay.get('farba1').put(false)
+	overlay.get('farba2').put(false)
+	overlay.get('farba3').put(true)
+	overlay.get('farba4').put(false)
+	overlay.get('farba5').put(false)
+	overlay.get('farba6').put(false)
+
+  
+}
+
+
+function ofarbaj4() {
+	overlay.get('farba1').put(false)
+	overlay.get('farba2').put(false)
+	overlay.get('farba3').put(false)
+	overlay.get('farba4').put(true)
+	overlay.get('farba5').put(false)
+	overlay.get('farba6').put(false) 
+
+}	
+
+
+function ofarbaj5() {
+	overlay.get('farba1').put(false)
+	overlay.get('farba2').put(false)
+	overlay.get('farba3').put(false)
+	overlay.get('farba4').put(false)
+	overlay.get('farba5').put(true)
+	overlay.get('farba6').put(false)
+
+  
+}	
+
+
+
+
+function ofarbaj6() {
+	overlay.get('farba1').put(false)
+	overlay.get('farba2').put(false)
+	overlay.get('farba3').put(false)
+	overlay.get('farba4').put(false)
+	overlay.get('farba5').put(false)
+	overlay.get('farba6').put(true)
+ 
+ 
+}	
+
+function show() {overlay.get('show').put(true)};
+function hide() {overlay.get('show').put(false)};
+</script>
+</body>
+</html>

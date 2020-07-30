@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lower Third</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@font-face {
+  font-family: esl;
+  src: url(esl_legend_bold.ttf);
+}
+
+html,
+body {
+	height: 1080px;
+	width: 1920px;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'esl';
+	background: transparent;
+}
+.sitebox {
+    position: fixed;
+}
+#lower-third {
+	position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+.show #lower-third {
+	left: 0%;
+    opacity: 1;
+}
+
+.oboji {
+    background: #4ddf20!important;
+
+}
+
+.table {
+    background-color: #414141!important;
+    transition: all 1s ease-in;
+}
+
+.boja {
+    transition: all 1s ease-in;
+}
+
+.trans {
+    transition: all 1s ease-in;
+}
+</style>
+</head>
+<body>
+
+        <div id="lower-third">
+    <div class="sitebox">
+
+   <table class="table table-dark text-center" style="margin-bottom:0; border:0; color: #ffff09; height:70px; width:1025px;">
+    <tr>
+    <td id="tema1" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test1">Lorem Ipsum 1</span></td>
+    <td id="tema2" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test2">Lorem Ipsum 1</span></td>
+    <td id="tema3" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test3">Lorem Ipsum 1</span></td>
+    <td id="tema4" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test4">Lorem Ipsum 1</span></td>
+    <td id="tema5" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test5">Lorem Ipsum 1</span></td>
+    <td id="tema6" class="boja align-middle" style="margin-bottom:0; border:0; font-size: 25px"><span id="test6">Lorem Ipsum 1</span></td>
+    </tr> </table>
+       <table class="table table-sm table-dark" style="margin-bottom:0; border:0; background-color: #2c2c2c; height: 90px; width:1025px;">
+    <tr>
+      <td id="opsirnije" class="align-middle trans" style="margin-bottom:0; border:0; background-color: #2c2c2c; font-size: 40px; padding-left: 30px;">lorem ipsum dolor sit amet</td>
+         </tr>
+  
+</table>
+    <div class="sitebox">
+
+		</div>
+	</div>
+<script src="../js/config.js"></script>
+<script src="../js/gun.min.js"></script>
+<script>
+GUN_SUPER_PEERS = GUN_SUPER_PEERS || ['http://127.0.0.1/gun'];
+let gun = Gun(GUN_SUPER_PEERS);
+var overlay = gun.get('scoreboard').get(window.location.hash || 'demo');
+
+function gunSyncHtml(elementID) {
+	var element = document.getElementById(elementID);
+	// Receive updates from gun
+	overlay.get(elementID).on(function(data, key){
+		element.innerHTML = data;
+	});
+};
+
+gunSyncHtml('tema1');
+gunSyncHtml('tema2');
+gunSyncHtml('tema3');
+gunSyncHtml('tema4');
+gunSyncHtml('tema5');
+gunSyncHtml('tema6');
+gunSyncHtml('opsirnije');
+
+overlay.get('farba1').on(function(data, key){
+    let div = document.querySelector('#tema1')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('farba2').on(function(data, key){
+   let div = document.querySelector('#tema2')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('farba3').on(function(data, key){
+   let div = document.querySelector('#tema3')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('farba4').on(function(data, key){
+   let div = document.querySelector('#tema4')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('farba5').on(function(data, key){
+   let div = document.querySelector('#tema5')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('farba6').on(function(data, key){
+   let div = document.querySelector('#tema6')
+  div.classList.toggle('oboji', data);
+});
+
+overlay.get('show').on(function(data, key){
+    document.body.classList.toggle('show', data);
+});
+</script>
+</body>
+</html>

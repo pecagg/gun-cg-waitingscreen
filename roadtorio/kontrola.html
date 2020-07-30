@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Road To Rio - Pregame</title>
+
+
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@font-face {
+  font-family: esl;
+  src: url(esl_legend_bold.ttf);
+}
+
+html
+{
+	 zoom: 1; 
+	height: 1080px;
+	width: 1920px;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'esl';
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+}
+
+body {
+	 background-color: transparent;
+	 font-family: 'esl';
+
+}
+.sitebox {
+    position: fixed;
+}
+
+
+
+.col {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.row {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.mecevi {
+/*top: 414px;
+	left: 121px;
+	width: 1630px;*/
+	color: white;
+	text-align: center; 
+	margin: auto;
+}
+
+.mec {
+	width: 512px!important;
+	min-width: 512px;
+	max-width: 512px;
+	margin-left: 27px;
+	margin-right: 27px;
+}
+
+.tim {
+	height: 222px;
+	line-height: 25px;
+	font-size: 25px;
+	width: 228px;
+	min-width: 228px;
+	max-width: 228px;
+	    background-color: #2c2c2c!important;
+}
+
+.logo {
+	background-color: #a2a2a2;
+	height: 145px;
+	padding-top: 53px;
+	color: #000;
+	background-position: center;
+	background-size: cover;
+	  background-repeat: no-repeat;
+}
+
+.logotekst
+{
+background-color: #ffffffcc;
+width: 100%;
+height: 145px;
+margin-top: -53px;
+    padding-top: 53px;
+}
+
+.logo select {
+	background-color: #2c2c2c;
+	color: #ffffff;
+	border: 0; }
+
+.bopad {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 125px;
+}
+
+.bestof {
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 20px;
+	min-width: 46px;
+	max-width: 46px;
+	background-color: #2c2c2c;
+	color: #ffffff;
+}
+
+.bestof select {
+	background-color: #2c2c2c;
+	color: #ffffff;
+	border: 0;
+}
+
+.vrememeca {
+	background-color: #2c2c2c;
+	font-size: 43px;
+	height: 68px;
+	line-height: 68px;
+	margin-top: 10px;
+}
+
+.vrememeca .form-control {
+	width: 100%;
+text-align: center;
+border: 0;
+  font-size: 43px;
+	height: 68px;
+	line-height: 68px;
+	margin-top: 0px
+
+}
+
+#lower-third {
+	position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+.show #lower-third {
+	left: 0%;
+    opacity: 1;
+}
+
+.oboji {
+    background: #4ddf20!important;
+
+}
+
+.mecevi {
+    transition: all 1s ease-in;
+    color: #ffeb07;
+}
+
+.boja {
+    transition: all 1s ease-in;
+}
+
+.trans {
+    transition: all 1s ease-in;
+}
+
+.sakrij {
+	display: none;
+}
+
+.centriraj {
+	margin: auto;
+	width: max-content;
+}
+
+.naslov {
+	align-items: center;
+	align-content: center;
+	place-content: center;
+	top: 89px;
+	margin-top:89px; }
+
+.naslovtekst {
+	align-content: center;
+	color: #000000;
+		place-content: center;
+		font-size: 47px;
+		margin-top: 10px;
+		margin-bottom: 50px; }
+
+.sponzori {
+	margin-top: 47px;
+	place-content: center;
+	margin-bottom: 35px; }
+
+.selectpicker {
+
+}
+
+.tim .form-control {
+ width: 80%;
+  font-weight:normal;
+ margin: auto;
+  background: none; 
+background-image:
+    linear-gradient(45deg, transparent 50%, yellow 60%),
+    linear-gradient(135deg, yellow 40%, transparent 50%) !important;
+  background-position:
+    calc(100% - 14px) 14px,
+    calc(100% - 7px) 14px,
+    100% 0;
+  background-size:
+    7px 7px,
+    7px 7px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.tim .form-control:hover {
+ width: 80%;
+ margin: auto;
+background-image:
+    linear-gradient(45deg, transparent 50%, orange 60%),
+    linear-gradient(135deg, orange 40%, transparent 50%) !important;
+  background-position:
+    calc(100% - 14px) 14px,
+    calc(100% - 7px) 14px,
+    100% 0;
+  background-size:
+    7px 7px,
+    7px 7px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+.tim optgroup{
+    background:#000;
+    color:#c2c2c2;
+    font-style:normal;
+    font-weight:normal;
+    font-size: 25px;
+    }
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.toggle-switch {
+  --width: 50px;
+  --height: 30px;
+  --padding: 2px;
+  --handle-size: calc(var(--height) - var(--padding) * 2);
+  color: #000;
+  font-size: 26px;
+  
+  display: inline-block;
+  outline-width: 0;
+}
+
+.toggle-switch > input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+label {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+.area {
+  padding: 4px;
+  margin: -4px;
+}
+
+.toggle-switch :active {
+  outline-width: 0;
+}
+
+.background,
+.handle {
+  transition: all 0.1s ease;
+}
+
+.background {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--height);
+  padding: 0 var(--padding);
+  vertical-align: text-bottom;
+  user-select: none;
+  background-color: #ffeb07;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: background-color .15s ease;
+}
+
+.toggle-switch:focus .area {
+  outline: 1px dotted gray;  
+}
+
+.toggle-switch:active .area {
+  outline-width: 0;
+}
+
+.toggle-switch:focus .background,
+.area:hover .background {
+  background-color: #ffeb07;
+}
+
+.handle {
+  width: var(--handle-size);
+  height: var(--handle-size);
+  background-color: white;
+  border-radius: 50%;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.handle:hover {
+  background-color: white;
+}
+
+input:checked + label .area .background {
+  background-color: lightgreen;
+}
+
+input:checked + label .area .handle {
+  background-color: white;
+  transform: translateX(calc(var(--width) - var(--handle-size)));
+}
+
+.mecheader {
+	color: #000;
+	font-size: 30px;
+}
+
+.toggle-switch {
+  --width: 50px;
+  --height: 30px;
+  --padding: 2px;
+  --handle-size: calc(var(--height) - var(--padding) * 2);
+  color: #000;
+  font-size: 26px;
+  
+  display: inline-block;
+  outline-width: 0;
+}
+
+.toggle-switch > input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+label {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+.area {
+  padding: 4px;
+  margin: -4px;
+}
+
+.toggle-swotch {
+  --width: 30px;
+  --height: 15px;
+  --padding: 2px;
+  --handle-size: calc(var(--height) - var(--padding) * 2);
+  color: #000;
+  font-size: 13px;
+  outline-width: 0;
+}
+
+.toggle-swotch > input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+label {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+.area {
+  padding: 4px;
+  margin: -4px;
+}
+
+.toggle-swotch :active {
+  outline-width: 0;
+}
+
+.toggle-swotch .background,
+.toggle-swotch .handle {
+  transition: all 0.1s ease;
+}
+
+.toggle-swotch .background {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--height);
+  padding: 0 var(--padding);
+  vertical-align: text-bottom;
+  user-select: none;
+  background-color: red;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: background-color .15s ease;
+}
+
+.toggle-swotch:focus .area {
+  outline: 1px dotted gray;  
+}
+
+.toggle-swotch:active .area {
+  outline-width: 0;
+}
+
+.toggle-swotch:focus .toggle-swotch .background,
+.toggle-swotch .area:hover .background {
+  background-color: red;
+}
+
+.toggle-swotch .handle {
+  width: var(--handle-size);
+  height: var(--handle-size);
+  background-color: black;
+  border-radius: 50%;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-swotch .handle:hover {
+  background-color: black;
+}
+
+.toggle-swotch input:checked + label .area .background {
+  background-color: #c2c2c2;
+}
+
+.toggle-swotch input:checked + label .area .handle {
+  background-color: black;
+  transform: translateX(calc(var(--width) - var(--handle-size)));
+}
+
+.sedamnaest {
+	margin-top: -17px;
+}
+
+.dolelinija {
+	width: 1720px;
+	height: 118px;
+	background-color: #2c2c2c;
+	margin-left: 10px;
+	margin-right: 100px;
+	display: flex;
+}
+
+.lowergore {
+	height: 80px;
+	width: 1077px;
+	line-height: 80px;
+	font-size: 70px!important;
+	color: #2c2c2c;
+	background-color: #ffffff;
+	margin: 0;
+	text-align: center;
+	justify-content: center;
+}
+
+.lowergore .form-control{
+	height: 100%;
+	font-size: 45px;
+	border: 0;
+	border-radius: 0 ;
+}
+
+.lowerdole {
+	height: 38px;
+	width: 1077px;
+	line-height: 38px;
+	font-size: 30px;
+	color: #ffeb07;
+	margin: 0;
+		justify-content: center;
+}
+
+.lowerdole .form-control{ 
+height: 100%
+font-size: 20px;
+border: 0;
+border-radius: 0; 
+background-color: #000000!important; }
+
+.trenutnogledate {
+	height: 118px;
+	width: 172px;
+	background-color: #2c2c2c;
+	margin: 0;
+	justify-content: center;
+	line-height: 56px;
+	font-size: 45px;
+	color: #ffffff;
+
+}
+
+.lowermec {
+	height: 118px;
+	width: 315px;
+	background-color: #ffffff;
+	margin: 0;
+	color: #000000;
+	display: flex;
+	padding-top: 15px;
+
+}
+
+.innerlowermec {
+	padding-left: 30px;
+	padding-top: 13px;
+
+}
+
+.innerlowertimlevo {
+	width: 90px;
+	height: 90px;
+	background-color: black;
+	margin-left: 30px;
+}
+
+.innerlowertimdesno {
+	width: 90px;
+	height: 90px;
+	background-color: black;
+}
+
+.innerlowervs {
+	width: 57px;
+	height: 57px;
+	line-height: 57px;
+	font-size: 28px;
+	background-color: #2c2c2c;
+	color: #ffffff;
+		margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 16px;
+}
+
+.auto {
+	width: auto;
+}
+
+.cispe {
+	display: block;
+	background-color: white;
+}
+
+.mapagore {
+	width: 80%;
+	background-color: #4edf20;
+	height: 48px;
+	line-height: 48px;
+	font-size: 23px;
+	color: #000000;
+	text-align: center;
+		justify-content: center;
+}
+
+.mapagore1 {
+	width: 80%;
+	background-color: #ffeb07;
+	height: 48px;
+	line-height: 48px;
+	font-size: 23px;
+	color: #000000;
+	text-align: center;
+		justify-content: center;
+}
+
+.mapadole {
+	font-size: 40px;
+	line-height: 70px;
+	height: 70px;
+	width: 50%
+	justify-content: center;
+}
+
+.mapadole .form-control {
+	font-size: 20px;
+	height: 100%;
+	width: 80%;
+	border: 0;
+	border-radius: 0;
+}
+
+.birajmapu {
+	width: 80%;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="mecevi">
+	<div class="centriraj">
+		<div class="row naslov">
+			</div>
+
+			<div class="row naslovtekst">ROAD TO RIO - KONTROLA</div>
+
+			<div class="row">
+
+
+
+		<div class="col mec">
+		<div class="row"><div class="col mecheader">MEC 1 <br><div class="toggle-swotch" tabindex="0"><font color="red">OFF</font>
+  <input disabled type="checkbox" checked="checked" name="my_checkbox" onclick='togglemec1()' value="true" id="togglemec1" />
+  <label for="togglemec1">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    ON
+  </label>
+</div></div></div>
+				<div class="row">
+					<div class="col tim">
+							 <label for="tim1">Tim 1</label>
+					<select class="form-control bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim1">
+	  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+						<div id="timlogo1" class="logo">   <div class="logotekst">Rezultat: 	<select id="rezultatmec1">
+  <option value="0"  selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div></div>
+					</div>
+					<div class="col bopad">
+					<div class="bestof">
+						<select id="bestofmec1">
+  <option value="BO1">BO1</option>
+  <option value="BO3" selected="selected">BO3</option>
+  <option value="BO5">BO5</option>
+</select>
+
+					</div>
+
+				</div> 
+					<div class="col tim">
+						<label for="tim2">Tim 2</label>
+
+	<select class="form-control bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim2">
+		  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+
+												 	<div id="timlogo2" class="logo"> <div class="logotekst"> Rezultat: 	<select id="rezultatmec2">
+  <option value="0"  selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col vrememeca">
+						<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="vreme1" value="13:00"> 
+					</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col">	
+
+<div class="toggle-switch" tabindex="0">REZULTAT
+  <input type="checkbox" checked="checked" name="my_checkbox" onclick='toggle1()' value="true" id="toggle1" />
+  <label for="toggle1">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    VREME
+  </label>
+</div>
+				
+			</div> </div>
+	</div>
+
+
+	<div class="col mec">
+		<div class="row"><div class="col mecheader">MEC 2 <br><div class="toggle-swotch" tabindex="0"><font color="red">OFF</font>
+  <input type="checkbox" checked="checked" name="my_checkbox" onclick='togglemec2()' value="true" id="togglemec2" />
+  <label for="togglemec2">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    ON
+  </label>
+</div></div></div>
+				<div class="row">
+					<div class="col tim">
+						<label for="tim3">Tim 1</label>
+
+	<select class="form-control  bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim3">
+	  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+
+												<div id="timlogo3" class="logo">   <div class="logotekst">   Rezultat: 	<select id="rezultatmec3">
+  <option value="0"  selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div></div>
+					</div>
+					<div class="col bopad">
+					<div class="bestof">
+						<select id="bestofmec2">
+  <option value="BO1">BO1</option>
+  <option value="BO3" selected="selected">BO3</option>
+  <option value="BO5">BO5</option>
+</select>
+					</div>
+				</div>
+					<div class="col tim">
+							<label for="tim4">Tim 2</label>
+
+<select class="form-control  bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim4">
+	  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+
+													<div id="timlogo4" class="logo">   <div class="logotekst">    Rezultat: 	<select id="rezultatmec4">
+   <option value="0"  selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div>
+					</div>
+				</div></div>
+				<div class="row">
+					<div class="col vrememeca">
+						<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="vreme2" value="13:00"> 
+					</div>
+
+
+		</div>
+
+		<div class="toggle-switch" tabindex="0">REZULTAT
+  <input type="checkbox" checked="checked" name="my_checkbox" onclick='toggle2()' value="true" id="toggle2" />
+  <label for="toggle2">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    VREME
+  </label>
+</div>
+	</div>
+
+	<div class="col mec">
+		<div class="row"><div class="col mecheader">MEC 3 <br><div class="toggle-swotch" tabindex="0"><font color="red">OFF</font>
+  <input type="checkbox" checked="checked" name="my_checkbox" onclick='togglemec3()' value="true" id="togglemec3" />
+  <label for="togglemec3">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    ON
+  </label>
+</div></div></div>
+		
+				<div class="row">
+					<div class="col tim">
+						<label for="tim5">Tim 1</label><select class="form-control  bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim5">
+	  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+													<div id="timlogo5" class="logo">   <div class="logotekst">    Rezultat: 	<select id="rezultatmec5">
+  <option value="0"  selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div>
+					</div></div>
+					<div class="col bopad">
+					<div class="bestof">
+						<select id="bestofmec3">
+  <option value="BO1">BO1</option>
+  <option value="BO3" selected="selected">BO3</option>
+  <option value="BO5">BO5</option>
+</select>
+					</div>
+				</div>
+					<div class="col tim">
+						<label for="tim6">Tim 2</label><select class="form-control  bg-dark text-white mb-2" data-live-search="true" data-live-search-style="startsWith" list="timjedanmec1"  id="tim6">
+	  <optgroup label="Europe">Europe</optgroup>
+<option value='Astralis'>Astralis</option>
+<option value='c0ntact'>c0ntact</option>
+<option value='Complexity'>Complexity</option>
+<option value='Copenhagen Flames'>Copenhagen Flames</option>
+<option value='Dignitas'>Dignitas</option>
+<option value='ENCE'>ENCE</option>
+<option value='FaZe'>FaZe</option>
+<option value='fnatic'>fnatic</option>
+<option value='G2'>G2</option>
+<option value='GODSENT'>GODSENT</option>
+<option value='Heretics'>Heretics</option>
+<option value='mousesports'>mousesports</option>
+<option value='Movistar Riders'>Movistar Riders</option>
+<option value='NiP'>NiP</option>
+<option value='North'>North</option>
+<option value='Vitality'>Vitality</option>
+	<optgroup label="North America">North America</optgroup>
+<option value='100 Thieves'>100 Thieves</option>
+<option value='Bad News Bears'>Bad News Bears</option>
+<option value='Cloud9'>Cloud9</option>
+<option value='Envy'>Envy</option>
+<option value='Evil Geniuses'>Evil Geniuses</option>
+<option value='FURIA'>FURIA</option>
+<option value='Gen.G'>Gen.G</option>
+<option value='Liquid'>Liquid</option>
+<option value='MIBR'>MIBR</option>
+<option value='Orgless'>Orgless</option>
+<option value='Triumph'>Triumph</option>
+<option value='Yeah'>Yeah</option>
+	<optgroup label="CIS">CIS</optgroup>
+<option value='forZe'>forZe</option>
+<option value='Gambit Youngsters'>Gambit Youngsters</option>
+<option value='Nemiga'>Nemiga</option>
+<option value='Spirit'>Spirit</option>
+<option value='Unique'>Unique</option>
+<option value='Winstrike'>Winstrike</option>
+<option value='Espada'>Espada</option>
+<option value='Hard Legion'>Hard Legion</option>
+<option value='Natus Vincere'>Natus Vincere</option>
+<option value='pro100'>pro100</option>
+<option value='Syman'>Syman</option>
+<option value='Virtus.pro'>Virtus.pro</option></select>
+												<div id="timlogo6" class="logo">   <div class="logotekst">    Rezultat: 	<select id="rezultatmec6">
+  <option value="0" selected="selected">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option></select></div>
+					</div></div>
+				</div>
+				<div class="row">
+					<div class="col vrememeca">
+						<input class="form-control form-control-sm bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="vreme3" value="13:00"> 
+					</div>
+
+		</div>
+
+			<div class="toggle-switch" tabindex="0">REZULTAT
+  <input type="checkbox" checked="checked" name="my_checkbox" onclick='toggle3()' value="true" id="toggle3" />
+  <label for="toggle3">
+    <div class="area" aria-hidden="true">
+      <div class="background">
+        <div class="handle"></div>
+      </div>
+    </div>
+    VREME
+  </label>
+</div>
+	</div>
+
+
+</div>
+
+<div class="row sponzori"><img src="img/relogarena.png"></div> 
+
+	<div class="dolelinija">
+		<div class="col">
+			<div class="lowergore"><input class="form-control form-control bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="lowergore" value="U TOKU JE ROAD TO RIO OVO JE KONTROLA"> </div>
+			<div class="lowerdole"><input class="form-control form-control bg-dark text-white form-inline mb-2 mr-sm-2" type="text" id="lowerdole" value="U TOKU DANA GLEDACETE | PERA VS ZIKE | ZIKA VS MIKE | PECA VS PERE"></div>
+		</div>
+		<div class="col cispe birajmapu">
+			<div class="mapagore1 row">AKTIVAN MEC</div><div class="mapadole row"><select class="form-control  bg-dark text-white" data-live-search="true" data-live-search-style="startsWith" id="aktivanmec">
+<option value='1'>Mec 1</option>
+<option value='2'>Mec 2</option>
+<option value='3'>Mec 3</option>
+</select></div>
+		</div>
+
+		
+				<div class="col birajmapu"><div class="mapagore row">SLEDI MAPA</div><div class="mapadole row"><select class="form-control  bg-dark text-white" data-live-search="true" data-live-search-style="startsWith" id="mapadole">
+<option value='Dust2'>Dust2</option>
+<option value='Mirage'>Mirage</option>
+<option value='Nuke'>Nuke</option>
+<option value='Vertigo'>Vertigo</option>
+<option value='Overpass'>Overpass</option>
+<option value='Inferno'>Inferno</option>
+<option value='Train'>Train</option>
+</select></div></div>
+
+	<script src="../js/config.js"></script>
+<script src="../js/gun.min.js"></script>
+<script>
+
+
+GUN_SUPER_PEERS = GUN_SUPER_PEERS || ['http://127.0.0.1/gun'];
+let gun = Gun(GUN_SUPER_PEERS);
+var overlay = gun.get('roadtorio').get(window.location.hash || 'demo');
+
+function gunSyncValue(elementID) {
+	var element = document.getElementById(elementID);
+	// Receive updates from gun
+	overlay.get(elementID).on(function(data, key){
+		element.value = data;
+	});
+
+
+
+	// Send changes to gun
+	element.addEventListener('change', function(){
+		overlay.get(elementID).put(element.value)
+	});
+};
+
+
+
+gunSyncValue('tim1');
+gunSyncValue('tim2');
+gunSyncValue('tim3');
+gunSyncValue('tim4');
+gunSyncValue('tim5');
+gunSyncValue('tim6');
+gunSyncValue('bestofmec1');
+gunSyncValue('bestofmec2');
+gunSyncValue('bestofmec3');
+gunSyncValue('vreme1');
+gunSyncValue('vreme2');
+gunSyncValue('vreme3');
+gunSyncValue('rezultatmec1');
+gunSyncValue('rezultatmec2');
+gunSyncValue('rezultatmec3');
+gunSyncValue('rezultatmec4');
+gunSyncValue('rezultatmec5');
+gunSyncValue('rezultatmec6');
+gunSyncValue('mapadole');
+gunSyncValue('lowergore')
+gunSyncValue('lowerdole')
+gunSyncValue('aktivanmec')
+
+
+function toggle1() {
+	 if (document.getElementById('toggle1').checked) 
+	{ overlay.get('prikazirezultat1').put(true);
+	overlay.get('prikazivreme1').put(false); } else {
+		overlay.get('prikazirezultat1').put(false);
+	overlay.get('prikazivreme1').put(true);
+	}
+};
+
+function toggle2() {
+
+	var element = document.getElementById('toggle2');
+	// Receive updates from gun
+	overlay.get('toggle2').on(function(data, key){
+		element.value = data;
+	});
+
+
+	 if (document.getElementById('toggle2').checked) 
+	{ overlay.get('prikazirezultat2').put(true);
+	overlay.get('prikazivreme2').put(false); } else {
+		overlay.get('prikazirezultat2').put(false);
+	overlay.get('prikazivreme2').put(true);
+	}
+};
+
+function toggle3() {
+	 if (document.getElementById('toggle3').checked) 
+	{ overlay.get('prikazirezultat3').put(true);
+	overlay.get('prikazivreme3').put(false); } else {
+		overlay.get('prikazirezultat3').put(false);
+	overlay.get('prikazivreme3').put(true);
+	}
+};
+
+function togglemec2() {
+	 if (document.getElementById('togglemec2').checked) 
+	{ overlay.get('prikazimec2').put(false);} else {
+		overlay.get('prikazimec2').put(true);
+	}
+};
+
+function togglemec3() {
+	 if (document.getElementById('togglemec3').checked) 
+	{ overlay.get('prikazimec3').put(false);} else {
+		overlay.get('prikazimec3').put(true);
+	}
+};
+
+function dajformu1(elementID) {
+	var selektovan = document.getElementById("tim1");
+
+function logo1(){
+		var index = selektovan.value;
+		var logo1 = document.getElementById(timlogo1);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo1').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo1 = document.getElementById(timlogo1);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo1').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo1())
+		
+	};
+
+function dajformu2(elementID) {
+	var selektovan = document.getElementById("tim2");
+
+function logo2(){
+		var index = selektovan.value;
+		var logo2 = document.getElementById(timlogo2);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo2').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo1 = document.getElementById(timlogo1);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo2').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo2())
+		
+	};
+
+	function dajformu3(elementID) {
+	var selektovan = document.getElementById("tim3");
+
+function logo3(){
+		var index = selektovan.value;
+		var logo3 = document.getElementById(timlogo3);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo3').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo3 = document.getElementById(timlogo3);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo3').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo3())
+		
+	};
+
+	function dajformu4(elementID) {
+	var selektovan = document.getElementById("tim4");
+
+function logo4(){
+		var index = selektovan.value;
+		var logo4 = document.getElementById(timlogo4);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo4').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo4 = document.getElementById(timlogo4);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo4').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo4())
+		
+	};
+
+function dajformu5(elementID) {
+	var selektovan = document.getElementById("tim5");
+
+function logo5(){
+		var index = selektovan.value;
+		var logo5 = document.getElementById(timlogo5);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo5').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo5 = document.getElementById(timlogo5);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo5').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo5())
+		
+	};
+
+
+	function dajformu6(elementID) {
+	var selektovan = document.getElementById("tim6");
+
+function logo6(){
+		var index = selektovan.value;
+		var logo6 = document.getElementById(timlogo6);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo6').style.backgroundImage = res;
+	}
+
+	selektovan.addEventListener('change', function() {
+		var index = selektovan.value;
+		var logo6 = document.getElementById(timlogo6);
+		var timovilink = "url('timovi/";
+		var krajlinka = ".jpg')"
+		var res=timovilink.concat(index, krajlinka);
+		document.getElementById('timlogo6').style.backgroundImage = res;
+	})
+
+	selektovan.addEventListener('change', logo6())
+		
+	};
+
+
+
+
+
+
+
+
+
+dajformu1('tim1');
+dajformu2('tim2');
+dajformu3('tim3');
+dajformu4('tim4');
+dajformu5('tim5');
+dajformu6('tim6');
+
+
+function hide() {overlay.get('show').put(false)};
+</script>
+
+

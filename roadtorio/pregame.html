@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Road To Rio - Pregame</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@font-face {
+  font-family: esl;
+  src: url(esl_legend_bold.ttf);
+}
+
+html,
+body {
+	height: 1080px;
+	width: 1920px;
+	margin: 0;
+	overflow: hidden;
+	font-family: 'esl';
+	background: transparent;
+}
+.sitebox {
+    position: fixed;
+}
+
+.col {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.row {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.mecevi {
+/*top: 414px;
+	left: 121px;
+	width: 1630px;*/
+	color: white;
+	text-align: center; 
+	margin: auto;
+	margin-top: -15px;
+}
+
+.mec {
+	width: 512px!important;
+	min-width: 512px;
+	max-width: 512px;
+	margin-left: 27px;
+	margin-right: 27px;
+}
+
+.tim {
+	height: 292px;
+	line-height: 65px;
+	font-size: 30px;
+	width: 228px;
+	min-width: 228px;
+	max-width: 228px;
+	    background-color: #2c2c2c!important;
+	    background-position: center bottom;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    transition-delay: 0;
+	    transition-timing-function: ease-in-out;
+
+}
+
+.logo {
+	background-image: url("https://via.placeholder.com/228.png");
+	height: 228px;
+}
+
+.bopad {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: auto;
+}
+
+.bestof {
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 29px;
+	min-width: 46px;
+	max-width: 46px;
+	background-color: #2c2c2c;
+	color: #ffffff;
+}
+
+.vrememeca {
+	background-color: #2c2c2c;
+	font-size: 43px;
+	height: 68px;
+	line-height: 68px;
+}
+
+#lower-third {
+	position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+.show #lower-third {
+	left: 0%;
+    opacity: 1;
+}
+
+.show {
+	opacity: 0;
+}
+
+.hide {
+	opacity: 100!important;
+}
+
+.oboji {
+    background: #4ddf20!important;
+
+}
+
+.mecevi {
+    transition: all 1s ease-in;
+    color: #ffeb07;
+}
+
+.boja {
+    transition: all 1s ease-in;
+}
+
+.trans {
+    transition: all 1s ease-in;
+}
+
+.sakrij {
+	display: none;
+}
+
+.centriraj {
+	margin: auto;
+	width: max-content;
+}
+
+.naslov {
+	align-items: center;
+	align-content: center;
+	place-content: center;
+	top: 104px;
+	margin-top:104px; }
+
+.naslovtekst {
+	align-content: center;
+	color: #000000;
+		place-content: center;
+		font-size: 65px;
+		margin-top: 10px;
+		margin-bottom: 50px; }
+
+.sponzori {
+	margin-top: 60px;
+	place-content: center;
+	margin-bottom: 35px;
+}
+
+.rezultatlevo {
+	display: flex;
+	margin-left: 105px;
+	font-size: 43px;
+	height: 68px;
+	line-height: 68px;
+
+}
+
+.rezultatdesno {
+	display: flex;
+	margin-right: 105px;
+	font-size: 43px;
+	height: 68px;
+	line-height: 68px;
+
+}
+
+.pozadina {
+
+		margin-top: 10px;
+	background-color: #2c2c2c;
+}
+
+.odjebi {
+	display: none;
+}
+
+.sedamnaest {
+	margin-top: -17px;
+}
+
+.dolelinija {
+	width: 1720px;
+	height: 118px;
+	background-color: #2c2c2c;
+	margin-left: 100px;
+	margin-right: 100px;
+	display: flex;
+}
+
+.lowergore {
+	height: 80px;
+	width: 1077px;
+	line-height: 80px;
+	font-size: 70px!important;
+	color: #2c2c2c;
+	background-color: #ffffff;
+	margin: 0;
+	text-align: center;
+	justify-content: center;
+}
+
+.lowerdole {
+	height: 38px;
+	width: 1077px;
+	line-height: 38px;
+	font-size: 30px;
+	color: #ffeb07;
+	margin: 0;
+		justify-content: center;
+}
+
+.trenutnogledate {
+	height: 118px;
+	width: 172px;
+	background-color: #2c2c2c;
+	margin: 0;
+	justify-content: center;
+	line-height: 56px;
+	font-size: 45px;
+	color: #ffffff;
+
+}
+
+.lowermec {
+	height: 118px;
+	width: 315px;
+	background-color: #ffffff;
+	margin: 0;
+	color: #000000;
+	display: flex;
+	padding-top: 15px;
+
+}
+
+.innerlowermec {
+	padding-left: 30px;
+	padding-top: 13px;
+
+}
+
+.innerlowertimlevo {
+	width: 90px;
+	height: 90px;
+	background-color: black;
+	background-position: center;
+	background-size: contain;
+	margin-left: 30px;
+}
+
+.innerlowertimdesno {
+	width: 90px;
+	height: 90px;
+	background-color: black;
+		background-position: center;
+	background-size: contain;
+}
+
+.innerlowervs {
+	width: 57px;
+	height: 57px;
+	line-height: 57px;
+	font-size: 28px;
+	background-color: #2c2c2c;
+	color: #ffffff;
+		margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 16px;
+}
+
+.auto {
+	width: auto;
+}
+
+.cispe {
+	display: block;
+}
+
+.mapagore {
+	width: 100%;
+	background-color: #4edf20;
+	height: 48px;
+	line-height: 48px;
+	font-size: 23px;
+	color: #000000;
+	text-align: center;
+		justify-content: center;
+}
+
+.mapadole {
+	font-size: 40px;
+	line-height: 70px;
+	height: 70px;
+	justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="mecevi">
+	<div class="centriraj">
+		<div class="row naslov">
+			<img src="img/eslone.png"></div>
+
+			<div class="row naslovtekst">ROAD TO RIO</div>
+
+			<div class="row sedamnaest">
+
+
+
+		<div id="prikazimec1" class="col mec">
+		
+				<div class="row">
+					<div id="tim1" class="col tim">
+						Tim 1
+						<div id="logo1" class="logo"></div>
+					</div>
+					<div class="col bopad">
+					<div id="bestofmec1" class="bestof">
+						BO3
+					</div>
+				</div>
+					<div id="tim2" class="col tim">
+						Tim 2
+						<div class="logo"></div>
+					</div>
+				</div>
+				<div class="row pozadina">
+
+							<div id="prikazirezultat1" class="rezultatlevo">
+					<div id="rezultatmec1">1</div></div>
+					<div class="col vrememeca show" id="prikazivreme1">
+					<div id="vreme1" class="col vrememeca">
+						13:00</div>
+					</div>
+					<div id="prikazirezultat2" class="rezultatdesno">
+					<div id="rezultatmec2">1</div></div>
+
+
+		</div>
+	</div>
+
+
+	<div id="prikazimec2" class="col mec">
+				<div class="row">
+					<div id="tim3" class="col tim">
+						Tim 1</div>
+						<div class="logo"></div>
+					
+					<div class="col bopad">
+					<div id="bestofmec2" class="bestof">
+						BO3
+					</div>
+				</div>
+					<div id="tim4" class="col tim">
+						Tim 2
+						<div class="logo"></div>
+					</div>
+				</div>
+				<div class="row pozadina">
+
+					<div id="prikazirezultat3" class="rezultatlevo">
+					<div id="rezultatmec3">1</div></div>
+					<div class="col vrememeca show" id="prikazivreme2">
+					<div id="vreme2" class="col vrememeca">
+						13:00</div>
+					</div>
+					<div id="prikazirezultat4" class="rezultatdesno">
+					<div id="rezultatmec4">1</div></div>
+
+		</div>
+	</div>
+
+	<div id="prikazimec3" class="col mec">
+		
+				<div class="row">
+					<div id="tim5" class="col tim">
+						Tim </div>
+						<div class="logo"></div>
+			
+					<div class="col bopad">
+					<div id="bestofmec3" class="bestof">
+						BO3
+					</div>
+				</div>
+					<div id="tim6" class="col tim">
+						Tim 2
+						<div class="logo"></div>
+					</div>
+				</div>
+				<div class="row pozadina">
+						<div id="prikazirezultat5" class="rezultatlevo">
+					<div id="rezultatmec5">1</div></div><div class="col vrememeca show" id="prikazivreme3">
+					<div id="vreme3" class="col vrememeca">
+						13:00</div>
+					</div>
+						<div id="prikazirezultat6" class="rezultatdesno">
+					<div id="rezultatmec6">1</div></div>
+		
+		</div>
+	</div>
+</div>
+
+<div class="row sponzori"><img src="img/relogarena.png"></div>
+
+
+	</div>
+<div class="container">
+	<div class="dolelinija">
+		<div class="col">
+			<div id="lowergore" class="lowergore">U TOKU JE ESL PRO LIGA ZA 2020-U GODINU</div>
+			<div id="lowerdole" class="lowerdole">U TOKU DANA GLEDACETE | PERA VS ZIKE | ZIKA VS MIKE | PECA VS PERE</div>
+		</div>
+		<div class="col auto">
+			<div id="trenutnogledate" class="trenutnogledate cispe">TRENUTNO GLEDATE</div>
+		</div>
+	<div class="col auto">
+	<div class="lowermec">	
+		<div id="aktivanlevo" class="col innerlowertimlevo"></div>
+		<div class="col innerlowervs">vs</div>
+		<div id="aktivandesno" class="col innerlowertimdesno"></div>
+	</div></div>
+		
+				<div class="col"><div class="mapagore row">SLEDI MAPA</div><div id="mapadole" class="mapadole row">OVERPASS</div></div>
+
+<script src="../js/config.js"></script>
+<script src="../js/gun.min.js"></script>
+<script>
+GUN_SUPER_PEERS = GUN_SUPER_PEERS || ['http://127.0.0.1/gun'];
+let gun = Gun(GUN_SUPER_PEERS);
+var overlay = gun.get('roadtorio').get(window.location.hash || 'demo');
+
+function riotekst(elementID) {
+	var element = document.getElementById(elementID);
+	// Receive updates from gun
+	overlay.get(elementID).on(function(data, key){
+		element.innerHTML = data;
+	});
+};
+
+function gunSyncHtml(elementID) {
+	var element = document.getElementById(elementID);
+
+	// Receive updates from gun
+	overlay.get(elementID).on(function(data, key){
+		element.innerHTML = data;
+	var timovilink = "url('timovi/";
+	var krajlinka = ".jpg')"
+	var res=timovilink.concat(data, krajlinka);
+		element.style.backgroundImage = res
+	});
+};
+
+gunSyncHtml('tim1');
+gunSyncHtml('tim2');
+gunSyncHtml('tim3');
+gunSyncHtml('tim4');
+gunSyncHtml('tim5');
+gunSyncHtml('tim6');
+riotekst('bestofmec1')
+riotekst('bestofmec2')
+riotekst('bestofmec3')
+riotekst('vreme1')
+riotekst('vreme2')
+riotekst('vreme3')
+riotekst('rezultatmec1')
+riotekst('rezultatmec2')
+riotekst('rezultatmec3')
+riotekst('rezultatmec4')
+riotekst('rezultatmec5')
+riotekst('rezultatmec6')
+riotekst('mapadole')
+riotekst('lowergore')
+riotekst('lowerdole')
+
+
+function sranje(elementID) {
+		var element = document.getElementById(elementID);
+	var div = document.querySelector('#aktivanlevo');
+	var div2 = document.querySelector('#aktivandesno');
+	var timovilink = "url('timovi/";
+	var krajlinka = ".jpg')"
+
+overlay.get('aktivanmec').on(function(data,key)
+						{
+	if (data == 1) 
+					{
+	overlay.get ('tim1').on(function(data,key)
+				{
+	var res=timovilink.concat(data, krajlinka);
+	div.style.backgroundImage = res;
+
+overlay.get ('tim2').on
+					(function(data,key)
+			{
+	var res2=timovilink.concat(data, krajlinka);
+	div2.style.backgroundImage = res2; 
+			}		)
+				
+				}		)
+					}
+
+	else if (data == 2)
+					{
+	overlay.get ('tim3').on(function(data,key)
+				{
+	var res3=timovilink.concat(data, krajlinka);
+	div.style.backgroundImage = res3;
+
+overlay.get ('tim4').on
+					(function(data,key)
+			{
+	var res4=timovilink.concat(data, krajlinka);
+	div2.style.backgroundImage = res4; 
+			}		)
+				
+				}		)
+					}
+
+		else 
+					{
+	overlay.get ('tim5').on(function(data,key)
+				{
+	var res=timovilink.concat(data, krajlinka);
+	div.style.backgroundImage = res;
+
+overlay.get ('tim6').on
+					(function(data,key)
+			{
+	var res=timovilink.concat(data, krajlinka);
+	div2.style.backgroundImage = res; 
+			}		)
+				
+				}		)
+					}
+
+						}
+							) };
+sranje('elementID')
+
+
+
+
+overlay.get('prikazirezultat1').on(function(data, key){
+	let div = document.querySelector ('#prikazirezultat1')
+	div.classList.toggle('show', data);
+	let div2 = document.querySelector('#prikazirezultat2')
+    div2.classList.toggle('show', data);
+    });
+
+overlay.get('prikazivreme1').on(function(data,key){
+	let div3 = document.querySelector('#prikazivreme1')
+    div3.classList.toggle('show', data);});
+
+
+overlay.get('prikazirezultat2').on(function(data, key){
+	let div = document.querySelector ('#prikazirezultat3')
+	div.classList.toggle('show', data);
+	let div2 = document.querySelector('#prikazirezultat4')
+    div2.classList.toggle('show', data);
+    });
+
+overlay.get('prikazivreme2').on(function(data,key){
+	let div3 = document.querySelector('#prikazivreme2')
+    div3.classList.toggle('show', data);});
+
+overlay.get('prikazirezultat3').on(function(data, key){
+	let div = document.querySelector ('#prikazirezultat5')
+	div.classList.toggle('show', data);
+	let div2 = document.querySelector('#prikazirezultat6')
+    div2.classList.toggle('show', data);
+    });
+
+overlay.get('prikazivreme3').on(function(data,key){
+	let div3 = document.querySelector('#prikazivreme3')
+    div3.classList.toggle('show', data);});
+
+overlay.get('prikazimec2').on(function(data,key){
+	let div5 = document.querySelector('#prikazimec2')
+    div5.classList.toggle('odjebi', data);});
+
+
+overlay.get('prikazimec3').on(function(data,key){
+	let div4 = document.querySelector('#prikazimec3')
+    div4.classList.toggle('odjebi', data);});
+
+
+
+</script>
+</body>
+</html>
